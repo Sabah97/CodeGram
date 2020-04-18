@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','username', 'email', 'password',
+        'name','title', 'description','username', 'email', 'password',
     ];
 
     /**
@@ -39,7 +39,7 @@ class User extends Authenticatable
     
 
     public function posts(){
-        return $this->hasMany(Posts::class);
+        return $this->hasMany(Post::class)->orderBy('created_at','DESC');
     }
     public function profile(){
         return $this->hasOne(Profile::class);
