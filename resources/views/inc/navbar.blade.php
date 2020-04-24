@@ -1,7 +1,7 @@
 <hr>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand d-flex"  href="{{ url('/') }}">
+    <a class="navbar-brand d-flex"  href="{{ url('/feed') }}">
     <div><img src="/svg/logo.svg" style="height: 20px; border-right: 1px solid #ffffff;" class="pr-3"></div>
     <div class="pl-3">CodeGram</div>
     
@@ -16,10 +16,10 @@
       <ul class="nav navbar-nav">
         
   
-        <form class="form-inline my-2 my-lg-0">
+        {{-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          </form> --}}
        
           
         </li>

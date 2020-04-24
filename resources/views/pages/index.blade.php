@@ -3,9 +3,9 @@
      <div class="jumbotron text-center">
          <h1>Welcome to CodeGram!</h1>
          <p>Here you can post pictures</p>
-         <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
+         {{-- <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
             <a class="btn btn-success btn-lg" href="/register" role="button">Register</a>
-         </p>
+         </p> --}}
      </div>
         @endsection
         

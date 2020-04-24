@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
+use App\Mail\NewUserWelcomeMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,14 +13,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/','PagesController@index');
+Auth::routes();
+Route::get('/email', function(){
+    return new NewUserWelcomeMail();
+});
+// Route::get('/','PagesController@index');
 
 // Route::get('/users/{id}/{name}', function($id, $name){
 //     return'This is user '. $name. ' with an Id of ' .$id;
 // });
 
-Auth::routes();
+
+Route::post('follow/{user}', 'FollowsController@store');
+Route::get('/feed','PostsController@index');
+ Route::get('/','PagesController@index');
+
 
 Route::get('/p/create' ,'PostsController@create');
 Route::post('/p','PostsController@store');
